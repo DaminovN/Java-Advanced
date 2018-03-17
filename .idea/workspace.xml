@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fbcd709-c562-4a31-8a47-e0395896abe7" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/arrayset/ArraySet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/arrayset/Main.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/implementor/Implementor.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/student/StudentDB.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/walk/MyFileVisitor.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/walk/RecursiveWalk.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/walk/Zzz.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,8 +48,8 @@
       <file leaf-file-name="StudentDB.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/student/StudentDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="113" column="90" lean-forward="false" selection-start-line="113" selection-start-column="90" selection-end-line="113" selection-end-column="90" />
+            <state relative-caret-position="482">
+              <caret line="120" column="5" lean-forward="true" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -464,7 +457,7 @@
       <workItem from="1520435052633" duration="90000" />
       <workItem from="1520979639525" duration="6385000" />
       <workItem from="1521023185739" duration="4263000" />
-      <workItem from="1521312202157" duration="14000" />
+      <workItem from="1521312202157" duration="236000" />
     </task>
     <servers />
   </component>
@@ -474,11 +467,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81602000" />
+    <option name="totallyTimeSpent" value="81824000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-11" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -489,7 +481,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23455498" sideWeight="0.49807587" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32879817" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28556034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -879,8 +871,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/student/StudentDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="113" column="90" lean-forward="false" selection-start-line="113" selection-start-column="90" selection-end-line="113" selection-end-column="90" />
+        <state relative-caret-position="482">
+          <caret line="120" column="5" lean-forward="true" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
           <folding />
         </state>
       </provider>
