@@ -8,8 +8,10 @@ import info.kgeorgiy.java.advanced.base.BaseTester;
 public class Tester extends BaseTester {
     public static void main(final String... args) {
         new Tester()
-                .add("interface", BasicInterfaceImplementorTest.class)
-                .add("class", BasicClassImplementorTest.class)
+                .add("interface", InterfaceImplementorTest.class)
+                .add("class", ClassImplementorTest.class)
+                .add("jar-interface", InterfaceJarImplementorTest.class)
+                .add("jar-class", ClassJarImplementorTest.class)
                 .run(args);
     }
 }
