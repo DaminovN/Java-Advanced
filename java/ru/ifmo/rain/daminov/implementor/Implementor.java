@@ -10,7 +10,12 @@ import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
-import java.nio.file.*;
+import java.nio.file.FileVisitResult;
+import java.nio.file.Files;
+import java.nio.file.InvalidPathException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -55,8 +60,10 @@ public class Implementor implements Impler, JarImpler {
      */
     public Implementor() {
     }
+
     /**
      * Checks if any of given arguments is <tt>null</tt>
+     *
      * @param args list of arguments
      * @throws ImplerException if any arguments is <tt>null</tt>
      */
@@ -67,6 +74,7 @@ public class Implementor implements Impler, JarImpler {
             }
         }
     }
+
     /**
      * This method gets the existing Class/Interface and implements/expands it.
      * The generated class will have suffix Impl.
@@ -75,8 +83,8 @@ public class Implementor implements Impler, JarImpler {
      * @param path   The location of generated class.
      * @throws ImplerException {@link ImplerException} if the given class cannot be generated.
      *                         <ul>
-     *                         <li> If the given mainClass is not class of interface. </li>
-     *                         <li> The mainClass is final. </li>
+     *                         <li> If the given aClass is not class of interface. </li>
+     *                         <li> The aClass is final. </li>
      *                         <li> The process is not allowed to create files or directories. </li>
      *                         <li> Interface contains only private constructors. </li>
      *                         <li> The problems with I/O. </li>
@@ -114,6 +122,7 @@ public class Implementor implements Impler, JarImpler {
 
     /**
      * If the class mainClass isn't located in default package, prints concatenation of string "package " and given class package name.
+     *
      * @throws IOException if an error occurred while writing to the destination file via {@link BufferedWriter}.
      */
     private void printPackage() throws IOException {
@@ -121,6 +130,7 @@ public class Implementor implements Impler, JarImpler {
             writer.write("package " + mainClass.getPackage().getName() + ";" + EOLN + EOLN);
         }
     }
+
     /**
      * Generate string containing modifiers divided with space from the given int except {@link Modifier#ABSTRACT},
      * {@link Modifier#TRANSIENT}, {@link Modifier#INTERFACE}. Uses {@link Modifier} to convert to String.
@@ -132,8 +142,10 @@ public class Implementor implements Impler, JarImpler {
     private String printModifiers(int modifier) {
         return Modifier.toString(modifier & ~(Modifier.INTERFACE | Modifier.ABSTRACT | Modifier.TRANSIENT)) + " ";
     }
+
     /**
      * Prints header of generated mainClass.
+     *
      * @throws IOException if an error occurred while writing to the destination file via {@link BufferedWriter}.
      */
     private void printTitle() throws IOException {
@@ -141,6 +153,7 @@ public class Implementor implements Impler, JarImpler {
                 + outputClassName + " " + (mainClass.isInterface() ? "implements " : "extends ") + mainClass.getSimpleName()
                 + " {" + EOLN);
     }
+
     /**
      * Generates the string, denoting the argument-list of method or constructor.
      * Arguments are named varName + i, where i is ordinal number of argument.
@@ -159,6 +172,7 @@ public class Implementor implements Impler, JarImpler {
         s.append(") ");
         return s.toString();
     }
+
     /**
      * Generates the string of next pattern:
      * <tt> throws a, b, c, ... </tt> where a, b, c are some types.
@@ -181,11 +195,12 @@ public class Implementor implements Impler, JarImpler {
         }
         return s.toString();
     }
+
     /**
      * Implements all constructors of the class/interface mainClass.
      *
      * @throws ImplerException If mainClass is class with no public constructors.
-     * @throws IOException if an error occurred while writing to the destination file via {@link BufferedWriter}.
+     * @throws IOException     if an error occurred while writing to the destination file via {@link BufferedWriter}.
      */
     private void printConstructors() throws IOException, ImplerException {
         boolean flag = true;
@@ -214,6 +229,7 @@ public class Implementor implements Impler, JarImpler {
 
     /**
      * Implements all methods from class or interface mainClass and public and protected methods of its superclasses.
+     *
      * @throws IOException if an error occurred while writing to the destination file via. {@link BufferedWriter}
      */
     private void printMethods() throws IOException {
@@ -227,10 +243,30 @@ public class Implementor implements Impler, JarImpler {
             writer.write(method + EOLN);
         }
     }
+
+    /**
+     * Filters given array of {@link Method}, leaving only declared as abstract and puts them
+     * in given {@link Set}, after wrapping them to {@link MethodWrapper}
+     * @param methods given array of {@link Method}
+     * @param set {@link Set} where to store methods
+     */
     private void addMethods(Set<MethodWrapper> set, Method[] methods) {
         Arrays.stream(methods).filter(method -> Modifier.isAbstract(method.getModifiers()))
                 .map(MethodWrapper::new).collect(Collectors.toCollection(() -> set));
     }
+    /**
+     * By given Class object creates directory for its java source or object file.
+     * It means that directories for packages are also created. If
+     * directories exist, nothing happens. Then returns the relative path
+     * to file.
+     *
+     * @param root   The location, where packages directories are created.
+     * @param aClass     The class object containing its packages data.
+     * @param suffix File expansion. java-source or java-object file.
+     * @return The relative path to given class file.
+     * @throws IOException Directories are created using {@link Files#createDirectories(Path, FileAttribute[])}
+     *                     and all its exceptions are thrown by this method.
+     */
     private Path createDirectory(Path root, Class<?> aClass, String suffix) throws IOException {
         if (aClass.getPackage() != null) {
             root = root.resolve(aClass.getPackage().getName().replace('.', File.separatorChar));
@@ -238,14 +274,16 @@ public class Implementor implements Impler, JarImpler {
         Files.createDirectories(root);
         return root.resolve(outputClassName + suffix);
     }
+
     /**
      * Implements the given class and creates Jar-Archive with resulting class.
+     *
      * @param aClass the given class.
-     * @param path destination of Jar-Archive.
+     * @param path   destination of Jar-Archive.
      * @throws ImplerException <ul>
-     *     <li> I/O Exceptions while creating, reading or deleting files and directories. </li>
-     *     <li> Exceptions thrown by {@link Implementor#implement(Class, Path)}.</li>
-     * </ul>
+     *                         <li> I/O Exceptions while creating, reading or deleting files and directories. </li>
+     *                         <li> Exceptions thrown by {@link Implementor#implement(Class, Path)}.</li>
+     *                         </ul>
      * @see Implementor#implement(Class, Path)
      */
     @Override
@@ -267,13 +305,15 @@ public class Implementor implements Impler, JarImpler {
             throw new ImplerException(e);
         }
     }
+
     /**
      * Creates Jar file in the given directory and stores the given file in it.
-     * @param dirs The location of package of java-class that need to be stored in archive.
+     *
+     * @param dirs     The location of package of java-class that need to be stored in archive.
      * @param pathFile The absolute path to java-class.
-     * @param path The directory, where jar file is stored.
+     * @param path     The directory, where jar file is stored.
      * @throws IOException If error occurred while using {@link JarOutputStream} or opening fileStream  to
-     * path.
+     *                     path.
      */
     private void createJarFile(Path dirs, Path pathFile, Path path) throws IOException {
         Manifest manifest = new Manifest();
@@ -285,12 +325,14 @@ public class Implementor implements Impler, JarImpler {
             Files.copy(dirs.resolve(pathFile), out);
         }
     }
+
     /**
      * Remove the given file/directory and everything in it.
+     *
      * @param root the path to the given file/directory.
-     * @throws IOException If error occurs while deleting files.
-     * @throws SecurityException  If the security manager denies access to the starting file. In the case of the.
-     * default provider, the checkRead method is invoked to check read access to the directory.
+     * @throws IOException       If error occurs while deleting files.
+     * @throws SecurityException If the security manager denies access to the starting file. In the case of the.
+     *                           default provider, the checkRead method is invoked to check read access to the directory.
      */
     private void clean(final Path root) throws IOException {
         if (!Files.exists(root)) {
@@ -310,14 +352,16 @@ public class Implementor implements Impler, JarImpler {
             }
         });
     }
+
     /**
      * Implements the given class in given directory, compiles it and stores its object file there.
-     * @param aClass the given class.
+     *
+     * @param aClass       the given class.
      * @param temporaryDir directory to store output files.
      * @return Path to created object file.
-     * @throws ImplerException If error occurred while compiling or creating files.
-     * @throws IOException If error occurred while compiling or creating files.
-     * @throws NullPointerException if compiler is can't be accessed.
+     * @throws ImplerException      If error occurred while compiling or creating files.
+     * @throws IOException          If error occurred while compiling or creating files.
+     * @throws NullPointerException if compiler can't be accessed.
      * @see Implementor#implement(Class, Path)
      */
     private Path createAndCompile(Class<?> aClass, Path temporaryDir) throws ImplerException, IOException {
@@ -331,6 +375,7 @@ public class Implementor implements Impler, JarImpler {
         }
         return createDirectory(temporaryDir, aClass, ".class");
     }
+
     /**
      * The class-wrapper for java methods. Provides meaningful methods {@link MethodWrapper#equals(Object)},
      * {@link MethodWrapper#hashCode()} and {@link MethodWrapper#toString()} and is
@@ -345,24 +390,30 @@ public class Implementor implements Impler, JarImpler {
          * Calculated hash for the method. Its value is stored during the first call of constructor.
          */
         private final int hash;
+
         /**
          * Creates exemplar of the class and stores given method in it.
+         *
          * @param method given method.
          */
         private MethodWrapper(Method method) {
             this.method = method;
             hash = (method.getName() + printArgs(method.getParameterTypes())).hashCode();
         }
+
         /**
          * Returns hash code of method stored in this object.
+         *
          * @return needed hash code.
          */
         @Override
         public int hashCode() {
             return hash;
         }
+
         /**
          * Checks for equality of methods in this wrappers and method in given object.
+         *
          * @param o the given object.
          * @return <tt> true </tt>, if objects are equal, <tt>false </tt> otherwise.
          */
@@ -375,8 +426,10 @@ public class Implementor implements Impler, JarImpler {
             return temp.method.getName().equals(method.getName()) &&
                     Arrays.equals(temp.method.getParameterTypes(), method.getParameterTypes());
         }
+
         /**
          * Generates the string presentation of method in java source file.
+         *
          * @return generated string.
          */
         @Override
@@ -389,6 +442,13 @@ public class Implementor implements Impler, JarImpler {
         }
     }
 
+    /**
+     * Generates the string <tt>"return x;"</tt>, where x is 0, false, null or empty string.
+     * Chooses the variant to fit returning type of method.
+     *
+     * @param aClass The returning type of method.
+     * @return Generated string.
+     */
     private String returnImpl(Class<?> aClass) {
         StringBuilder s = new StringBuilder(TAB + TAB + "return ");
         if (!aClass.isPrimitive()) {
@@ -400,6 +460,7 @@ public class Implementor implements Impler, JarImpler {
         }
         return s.append(";").toString();
     }
+
     /**
      * Runs Class-Implementor (method implement) or Creates Jar(method jarImplement).
      *
@@ -409,9 +470,17 @@ public class Implementor implements Impler, JarImpler {
      *             <li> -jar fullClassName generatedFilesLocation. The jarImplement method called. </li>
      *             <li> fullClassName generatedFilesLocation. The implement method is called. </li>
      *             </ul>
-     *
      */
     public static void main(String[] args) {
+        if (args == null || (args.length != 2 && args.length != 3)) {
+            System.out.println("Two or three arguments expected");
+            return;
+        }
+        for (String arg : args) {
+            if (arg == null) {
+                System.out.println("All arguments must be non-null");
+            }
+        }
         try {
             if (args[0].equals("-jar")) {
                 new Implementor().implementJar(Class.forName(args[1]), Paths.get(args[2]));
@@ -422,9 +491,9 @@ public class Implementor implements Impler, JarImpler {
             System.out.println(e.getMessage());
         } catch (ClassNotFoundException e) {
             System.out.println("No such class: " + e.getMessage());
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Not enough main() arguments");
         }
     }
 }
 //java -cp ./../../../artifacts/JarImplementorTest.jar:./../../../lib/hamcrest-core-1.3.jar:./../../../lib/junit-4.11.jar:./../../../lib/jsoup-1.8.1.jar:./../../../lib/quickcheck-0.6.jar: info.kgeorgiy.java.advanced.implementor.Tester  jar-class ru.ifmo.rain.daminov.implementor.Implementor
+//jar cfm Implemetor.jar ./out/production/java-advanced-2018/META-INF/MANIFEST ./out/production/java-advanced-2018/ru/ifmo/rain/daminov/implementor/Implementor
+//Class-Path: ./../artifacts/JarImplementorTest.jar:./../lib/hamcrest-core-1.3.jar:./../lib/junit-4.11.jar:./../lib/jsoup-1.8.1.jar:./../lib/quickcheck-0.6.jar:
