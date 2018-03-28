@@ -247,13 +247,15 @@ public class Implementor implements Impler, JarImpler {
     /**
      * Filters given array of {@link Method}, leaving only declared as abstract and puts them
      * in given {@link Set}, after wrapping them to {@link MethodWrapper}
+     *
      * @param methods given array of {@link Method}
-     * @param set {@link Set} where to store methods
+     * @param set     {@link Set} where to store methods
      */
     private void addMethods(Set<MethodWrapper> set, Method[] methods) {
         Arrays.stream(methods).filter(method -> Modifier.isAbstract(method.getModifiers()))
                 .map(MethodWrapper::new).collect(Collectors.toCollection(() -> set));
     }
+
     /**
      * By given Class object creates directory for its java source or object file.
      * It means that directories for packages are also created. If
@@ -261,7 +263,7 @@ public class Implementor implements Impler, JarImpler {
      * to file.
      *
      * @param root   The location, where packages directories are created.
-     * @param aClass     The class object containing its packages data.
+     * @param aClass The class object containing its packages data.
      * @param suffix File expansion. java-source or java-object file.
      * @return The relative path to given class file.
      * @throws IOException Directories are created using {@link Files#createDirectories(Path, FileAttribute[])}
@@ -481,19 +483,24 @@ public class Implementor implements Impler, JarImpler {
                 System.out.println("All arguments must be non-null");
             }
         }
+        JarImpler implementor = new Implementor();
         try {
-            if (args[0].equals("-jar")) {
-                new Implementor().implementJar(Class.forName(args[1]), Paths.get(args[2]));
+            if (args.length == 3) {
+                implementor.implementJar(Class.forName(args[1]), Paths.get(args[2]));
             } else {
-                new Implementor().implement(Class.forName(args[0]), Paths.get(args[1]));
+                implementor.implement(Class.forName(args[0]), Paths.get(args[1]));
             }
-        } catch (ImplerException | InvalidPathException e) {
-            System.out.println(e.getMessage());
+        } catch (InvalidPathException e) {
+            System.out.println("Incorrect path to root: " + e.getMessage());
         } catch (ClassNotFoundException e) {
-            System.out.println("No such class: " + e.getMessage());
+            System.out.println("Incorrect class name: " + e.getMessage());
+        } catch (ImplerException e) {
+            System.out.println("An error occurred during implementation: " + e.getMessage());
         }
     }
 }
+
+
 //java -cp ./../../../artifacts/JarImplementorTest.jar:./../../../lib/hamcrest-core-1.3.jar:./../../../lib/junit-4.11.jar:./../../../lib/jsoup-1.8.1.jar:./../../../lib/quickcheck-0.6.jar: info.kgeorgiy.java.advanced.implementor.Tester  jar-class ru.ifmo.rain.daminov.implementor.Implementor
 //jar cfm Implemetor.jar ./out/production/java-advanced-2018/META-INF/MANIFEST ./out/production/java-advanced-2018/ru/ifmo/rain/daminov/implementor/Implementor
 //Class-Path: ./../artifacts/JarImplementorTest.jar:./../lib/hamcrest-core-1.3.jar:./../lib/junit-4.11.jar:./../lib/jsoup-1.8.1.jar:./../lib/quickcheck-0.6.jar:
