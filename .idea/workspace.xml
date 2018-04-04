@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fbcd709-c562-4a31-8a47-e0395896abe7" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/concurrent/IterativeParallelism.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/concurrent/ParallelMapperImpl.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/java-advanced-2018.iml" afterPath="$PROJECT_DIR$/.idea/java-advanced-2018.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/java/MyJavaDoc/allclasses-frame.html" afterPath="$PROJECT_DIR$/java/MyJavaDoc/allclasses-frame.html" />
       <change beforePath="$PROJECT_DIR$/java/MyJavaDoc/allclasses-noframe.html" afterPath="$PROJECT_DIR$/java/MyJavaDoc/allclasses-noframe.html" />
@@ -25,8 +28,6 @@
       <change beforePath="$PROJECT_DIR$/java/MyJavaDoc/ru/ifmo/rain/daminov/implementor/package-summary.html" afterPath="$PROJECT_DIR$/java/MyJavaDoc/ru/ifmo/rain/daminov/implementor/package-summary.html" />
       <change beforePath="$PROJECT_DIR$/java/MyJavaDoc/ru/ifmo/rain/daminov/implementor/package-tree.html" afterPath="$PROJECT_DIR$/java/MyJavaDoc/ru/ifmo/rain/daminov/implementor/package-tree.html" />
       <change beforePath="$PROJECT_DIR$/java/MyJavaDoc/serialized-form.html" afterPath="$PROJECT_DIR$/java/MyJavaDoc/serialized-form.html" />
-      <change beforePath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/implementor/Implementor.java" afterPath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/implementor/Implementor.java" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-advanced-2018/Implementor.jar" afterPath="$PROJECT_DIR$/out/production/java-advanced-2018/Implementor.jar" />
       <change beforePath="$PROJECT_DIR$/out/production/java-advanced-2018/MyJavaDoc/allclasses-frame.html" afterPath="$PROJECT_DIR$/out/production/java-advanced-2018/MyJavaDoc/allclasses-frame.html" />
       <change beforePath="$PROJECT_DIR$/out/production/java-advanced-2018/MyJavaDoc/allclasses-noframe.html" afterPath="$PROJECT_DIR$/out/production/java-advanced-2018/MyJavaDoc/allclasses-noframe.html" />
       <change beforePath="$PROJECT_DIR$/out/production/java-advanced-2018/MyJavaDoc/constant-values.html" afterPath="$PROJECT_DIR$/out/production/java-advanced-2018/MyJavaDoc/constant-values.html" />
@@ -49,9 +50,6 @@
       <change beforePath="$PROJECT_DIR$/out/production/java-advanced-2018/MyJavaDoc/ru/ifmo/rain/daminov/implementor/package-summary.html" afterPath="$PROJECT_DIR$/out/production/java-advanced-2018/MyJavaDoc/ru/ifmo/rain/daminov/implementor/package-summary.html" />
       <change beforePath="$PROJECT_DIR$/out/production/java-advanced-2018/MyJavaDoc/ru/ifmo/rain/daminov/implementor/package-tree.html" afterPath="$PROJECT_DIR$/out/production/java-advanced-2018/MyJavaDoc/ru/ifmo/rain/daminov/implementor/package-tree.html" />
       <change beforePath="$PROJECT_DIR$/out/production/java-advanced-2018/MyJavaDoc/serialized-form.html" afterPath="$PROJECT_DIR$/out/production/java-advanced-2018/MyJavaDoc/serialized-form.html" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-advanced-2018/ru/ifmo/rain/daminov/implementor/Implementor$1.class" afterPath="$PROJECT_DIR$/out/production/java-advanced-2018/ru/ifmo/rain/daminov/implementor/Implementor$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-advanced-2018/ru/ifmo/rain/daminov/implementor/Implementor$MethodWrapper.class" afterPath="$PROJECT_DIR$/out/production/java-advanced-2018/ru/ifmo/rain/daminov/implementor/Implementor$MethodWrapper.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-advanced-2018/ru/ifmo/rain/daminov/implementor/Implementor.class" afterPath="$PROJECT_DIR$/out/production/java-advanced-2018/ru/ifmo/rain/daminov/implementor/Implementor.class" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,16 +72,107 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Implementor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Implementor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/implementor/Implementor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="301" column="13" lean-forward="true" selection-start-line="301" selection-start-column="13" selection-end-line="301" selection-end-column="13" />
+            <state relative-caret-position="7644">
+              <caret line="318" column="7" lean-forward="false" selection-start-line="318" selection-start-column="7" selection-end-line="318" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#16735#16736#0" expanded="true" />
                 <element signature="e#16770#16771#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IterativeParallelism.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/concurrent/IterativeParallelism.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#474#475#0" expanded="true" />
+                <element signature="e#512#513#0" expanded="true" />
+                <element signature="e#548#549#0" expanded="true" />
+                <element signature="e#579#580#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tester.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java/info/kgeorgiy/java/advanced/mapper/Tester.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParallelMapperImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/concurrent/ParallelMapperImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="69" column="30" lean-forward="true" selection-start-line="69" selection-start-column="30" selection-end-line="91" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParallelMapper.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/artifacts/ParallelMapperTest.jar!/info/kgeorgiy/java/advanced/mapper/ParallelMapper.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <marker date="1522706486117" expanded="true" signature="0:104" ph="/.../" />
+                <marker date="1522706486117" expanded="false" signature="158:209" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tester.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java/info/kgeorgiy/java/advanced/concurrent/Tester.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScalarIPTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java/info/kgeorgiy/java/advanced/concurrent/ScalarIPTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3718">
+              <caret line="157" column="14" lean-forward="false" selection-start-line="157" selection-start-column="14" selection-end-line="157" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScalarIP.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java/info/kgeorgiy/java/advanced/concurrent/ScalarIP.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentDB.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/student/StudentDB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2340">
+              <caret line="106" column="5" lean-forward="false" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,14 +192,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="package-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>createandC</find>
       <find>cREATEjAR</find>
       <find>EQUALS</find>
       <find>.jar</find>
@@ -140,6 +228,7 @@
       <find>compileAn</find>
       <find>printTi</find>
       <find>printC</find>
+      <find>comparators</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -172,6 +261,10 @@
         <option value="$PROJECT_DIR$/ru/ifmo/rain/daminov/implementor/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/java/Manifest.txt" />
         <option value="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/implementor/Implementor.java" />
+        <option value="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/IterativeParallelism.java" />
+        <option value="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/concurrent/ParallelMapper.java" />
+        <option value="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/concurrent/ParallelMapperImpl.java" />
+        <option value="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/concurrent/IterativeParallelism.java" />
       </list>
     </option>
   </component>
@@ -203,8 +296,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -226,6 +317,26 @@
               <item name="java-advanced-2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="java-advanced-2018" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="advanced" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java-advanced-2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-advanced-2018" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="advanced" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java-advanced-2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-advanced-2018" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="advanced" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java-advanced-2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-advanced-2018" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="daminov" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -233,7 +344,7 @@
               <item name="java-advanced-2018" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="daminov" type="462c0819:PsiDirectoryNode" />
-              <item name="implementor" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="java-advanced-2018" type="b2602c69:ProjectViewProjectNode" />
@@ -243,13 +354,15 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/artifacts/JarImplementorTest.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/artifacts/ParallelMapperTest.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -272,7 +385,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Tester implementor">
+  <component name="RunManager" selected="Application.Tester mapper">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -298,16 +411,16 @@
       <module name="java-advanced-2018" />
       <envs />
     </configuration>
-    <configuration name="Tester Student" type="Application" factoryName="Application" temporary="true">
+    <configuration name="Tester Concur" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="info.kgeorgiy.java.advanced.student.*" />
+          <option name="PATTERN" value="info.kgeorgiy.java.advanced.concurrent.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="info.kgeorgiy.java.advanced.student.Tester" />
+      <option name="MAIN_CLASS_NAME" value="info.kgeorgiy.java.advanced.concurrent.Tester" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="StudentGroupQuery ru.ifmo.rain.daminov.student.StudentDB qqq" />
+      <option name="PROGRAM_PARAMETERS" value="list ru.ifmo.rain.daminov.concurrent.IterativeParallelism" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -330,6 +443,25 @@
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="java-advanced-2018" />
+      <envs />
+    </configuration>
+    <configuration name="Tester mapper" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="info.kgeorgiy.java.advanced.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="info.kgeorgiy.java.advanced.mapper.Tester" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="list ru.ifmo.rain.daminov.concurrent.ParallelMapperImpl,ru.ifmo.rain.daminov.concurrent.IterativeParallelism" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -377,20 +509,6 @@
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-    </configuration>
-    <configuration name="kkk" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="kkk" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -464,18 +582,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Tester" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Tester Student" />
-      <item index="2" class="java.lang.String" itemvalue="Application.kkk" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Implementor" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Tester implementor" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Implementor" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Tester implementor" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Tester Concur" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Tester mapper" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Tester implementor" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Implementor" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Tester" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Tester" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Tester Student" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Tester mapper" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Tester Concur" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Tester implementor" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Implementor" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Tester" />
       </list>
     </recent_temporary>
   </component>
@@ -515,7 +633,10 @@
       <workItem from="1521615492662" duration="142000" />
       <workItem from="1521627928392" duration="12492000" />
       <workItem from="1522179064380" duration="3797000" />
-      <workItem from="1522232931206" duration="3892000" />
+      <workItem from="1522232931206" duration="3955000" />
+      <workItem from="1522706400753" duration="1149000" />
+      <workItem from="1522786699405" duration="10814000" />
+      <workItem from="1522838989765" duration="5172000" />
     </task>
     <servers />
   </component>
@@ -525,7 +646,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140913000" />
+    <option name="totallyTimeSpent" value="158111000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-11" width="1920" height="1053" extended-state="6" />
@@ -540,13 +661,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23455498" sideWeight="0.50192416" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3537415" sideWeight="0.49807587" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34240362" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3015873" sideWeight="0.49807587" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3469388" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32004312" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33620688" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32879817" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -559,6 +679,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="100" y="143" width="1720" height="821" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879817" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,62 +693,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/util/AbstractSet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/lang/Override.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/util/NavigableSet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/artifacts/ArraySetTest.jar!/info/kgeorgiy/java/advanced/arrayset/NavigableSetTest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/artifacts/ArraySetTest.jar!/info/kgeorgiy/java/advanced/arrayset/Tester.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java/info/kgeorgiy/java/advanced/base/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/util/SortedSet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/arrayset/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/java/info/kgeorgiy/java/advanced/arrayset/NavigableSetTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -846,7 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -854,7 +918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -862,14 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/student/StudentDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="106" column="5" lean-forward="true" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -883,12 +938,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/implementor/Implementor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="301" column="13" lean-forward="true" selection-start-line="301" selection-start-column="13" selection-end-line="301" selection-end-column="13" />
+        <state relative-caret-position="7644">
+          <caret line="318" column="7" lean-forward="false" selection-start-line="318" selection-start-column="7" selection-end-line="318" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#16735#16736#0" expanded="true" />
             <element signature="e#16770#16771#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/student/StudentDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2340">
+          <caret line="106" column="5" lean-forward="false" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java/info/kgeorgiy/java/advanced/concurrent/ScalarIP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/lang/Boolean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="28" column="19" lean-forward="false" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java/info/kgeorgiy/java/advanced/concurrent/ScalarIPTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3718">
+          <caret line="157" column="14" lean-forward="false" selection-start-line="157" selection-start-column="14" selection-end-line="157" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java/info/kgeorgiy/java/advanced/concurrent/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/artifacts/ParallelMapperTest.jar!/info/kgeorgiy/java/advanced/mapper/ParallelMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <marker date="1522706486117" expanded="true" signature="0:104" ph="/.../" />
+            <marker date="1522706486117" expanded="false" signature="158:209" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java/info/kgeorgiy/java/advanced/mapper/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/concurrent/ParallelMapperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="69" column="30" lean-forward="true" selection-start-line="69" selection-start-column="30" selection-end-line="91" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/concurrent/IterativeParallelism.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
           </folding>
         </state>
       </provider>
