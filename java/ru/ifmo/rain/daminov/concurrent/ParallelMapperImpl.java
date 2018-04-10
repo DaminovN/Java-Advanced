@@ -8,7 +8,7 @@ import java.util.function.Function;
 public class ParallelMapperImpl implements  ParallelMapper {
     private final Queue<Runnable> tasks;
     private final List<Thread> threads;
-    private final static int MAX = 100000;
+    private final static int MAX = 1000000;
     public ParallelMapperImpl(final int threadNumb) {
         threads = new ArrayList<>();
         tasks = new ArrayDeque<>();
