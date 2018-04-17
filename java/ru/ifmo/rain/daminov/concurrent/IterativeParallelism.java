@@ -2,6 +2,7 @@ package ru.ifmo.rain.daminov.concurrent;
 
 import info.kgeorgiy.java.advanced.concurrent.*;
 import info.kgeorgiy.java.advanced.mapper.ParallelMapper;
+
 import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -11,12 +12,15 @@ import java.util.stream.Stream;
 public class IterativeParallelism implements ScalarIP, ListIP {
 
     private final ParallelMapper myMapper;
+
     public IterativeParallelism(ParallelMapper mapper) {
         this.myMapper = mapper;
     }
+
     public IterativeParallelism() {
         myMapper = null;
     }
+
     private <T, R> R baseTask(int threadNumber, final List<? extends T> list,
                               final Function<? super Stream<? extends T>, ? extends R> mapper,
                               final Function<? super Stream<? extends R>, ? extends R> resultCollector) throws InterruptedException {
@@ -24,7 +28,7 @@ public class IterativeParallelism implements ScalarIP, ListIP {
             throw new IllegalArgumentException("Number of threads should be positive");
         }
         threadNumber = Math.max(1, Math.min(threadNumber, list.size()));
-        final List<Stream<? extends  T>> subTasks = new ArrayList<>();
+        final List<Stream<? extends T>> subTasks = new ArrayList<>();
         final int blockSize = list.size() / threadNumber;
         int carry = list.size() % threadNumber;
         int leftBound = 0;
@@ -73,7 +77,7 @@ public class IterativeParallelism implements ScalarIP, ListIP {
         if (list.size() == 0) {
             throw new IllegalArgumentException("Non zero list size expected");
         }
-        Function<Stream<? extends  T>, ? extends T> getMin = stream -> stream.min(comparator).get();
+        Function<Stream<? extends T>, ? extends T> getMin = stream -> stream.min(comparator).get();
         return baseTask(threadNumber, list, getMin, getMin);
     }
 
