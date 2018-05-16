@@ -501,6 +501,6 @@ public class Implementor implements Impler, JarImpler {
 }
 
 
-//java -cp ./../../../artifacts/JarImplementorTest.jar:./../../../lib/hamcrest-core-1.3.jar:./../../../lib/junit-4.11.jar:./../../../lib/jsoup-1.8.1.jar:./../../../lib/quickcheck-0.6.jar: info.kgeorgiy.java.advanced.implementor.Tester  jar-class ru.ifmo.rain.daminov.implementor.Implementor
 //jar cfm Implemetor.jar ./out/production/java-advanced-2018/META-INF/MANIFEST ./out/production/java-advanced-2018/ru/ifmo/rain/daminov/implementor/Implementor
+//java -cp ./../../../artifacts/JarImplementorTest.jar:./../../../lib/hamcrest-core-1.3.jar:./../../../lib/junit-4.11.jar:./../../../lib/jsoup-1.8.1.jar:./../../../lib/quickcheck-0.6.jar: info.kgeorgiy.java.advanced.implementor.Tester  jar-class ru.ifmo.rain.daminov.implementor.Implementor
 //Class-Path: ./../artifacts/JarImplementorTest.jar:./../lib/hamcrest-core-1.3.jar:./../lib/junit-4.11.jar:./../lib/jsoup-1.8.1.jar:./../lib/quickcheck-0.6.jar:

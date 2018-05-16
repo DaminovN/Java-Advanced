@@ -16,12 +16,14 @@ public class WebCrawler implements Crawler {
     private final ExecutorService extractorPool;
     private final ExecutorService downloaderPool;
     private final LinkHandler handler;
+
     public WebCrawler(Downloader downloader, int downloaders, int extractors, int perHost) {
         downloaderPool = Executors.newFixedThreadPool(downloaders);
         extractorPool = Executors.newFixedThreadPool(extractors);
         handler = new LinkHandler(perHost);
         this.downloader = downloader;
     }
+
     @Override
     public Result download(String url, int depth) {
         Phaser waiter = new Phaser(1);
@@ -84,9 +86,11 @@ public class WebCrawler implements Crawler {
         downloaderPool.shutdown();
         extractorPool.shutdown();
     }
+
     private class LinkHandler {
         private final int maxPerHost;
         private final Map<String, HostData> countersAndQueue = new ConcurrentHashMap<>();
+
         LinkHandler(int maxPerHost) {
             this.maxPerHost = maxPerHost;
         }
@@ -117,10 +121,12 @@ public class WebCrawler implements Crawler {
             hostData.locker.unlock();
         }
     }
+
     private class HostData {
         final Queue<Runnable> q;
         final ReentrantLock locker;
         int connections;
+
         HostData() {
             q = new LinkedBlockingQueue<>();
             locker = new ReentrantLock();
