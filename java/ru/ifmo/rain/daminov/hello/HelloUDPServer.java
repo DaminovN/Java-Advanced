@@ -9,34 +9,19 @@ import java.net.DatagramSocket;
 import java.net.PortUnreachableException;
 import java.net.SocketException;
 import java.util.Arrays;
+import java.util.concurrent.*;
 import java.util.stream.Stream;
 
 import static java.lang.System.exit;
 
 public class HelloUDPServer implements HelloServer, AutoCloseable {
     private HelloServer server = null;
-    HelloUDPServer() {
+    private final static int MAX_SIZE = 10000;
+    public HelloUDPServer() {
     }
 
-    private static int[] checkArguments(int[] indexes, String[] args, int expectedLength) {
-        if (args.length < expectedLength) {
-            System.err.println("Not enough arguments for running");
-            exit(1);
-        }
-        int res[] = new int[indexes.length];
-        for (int i = 0; i < indexes.length; i++) {
-            int index = indexes[i];
-            try {
-                res[i] = Integer.parseInt(args[index]);
-            } catch (NumberFormatException e) {
-                System.err.println("Argument #" + index + ": " + args[index] + " expected to be Integer");
-                exit(1);
-            }
-        }
-        return res;
-    }
     public static void main(String[] args) {
-        int data[] = checkArguments(new int[]{0, 1}, args, 2);
+        int data[] = Utils.checkArguments(new int[]{0, 1}, args, 2);
         (new HelloUDPServer()).start(data[0], data[1]);
     }
     @Override
@@ -44,7 +29,7 @@ public class HelloUDPServer implements HelloServer, AutoCloseable {
         try {
             server = new HelloServer(port, threads);
         } catch (SocketException e) {
-            e.printStackTrace();
+            System.err.println("Unable to create socket binded to port : " + port);
         }
     }
 
@@ -55,43 +40,56 @@ public class HelloUDPServer implements HelloServer, AutoCloseable {
 
     private class HelloServer implements AutoCloseable {
         private final DatagramSocket socket;
-        private final Thread[] serverThreads;
+        private boolean closed = false;
+        private ExecutorService serverThreads;
+        private ExecutorService listener;
+//        private final Thread[] serverThreads;
         private HelloServer(int port, int threads) throws SocketException {
             socket = new DatagramSocket(port);
-            serverThreads = Stream.generate(() -> new Thread(() -> {
+            serverThreads = new ThreadPoolExecutor(threads, threads, 1, TimeUnit.MINUTES
+                                    , new ArrayBlockingQueue<>(MAX_SIZE), new ThreadPoolExecutor.DiscardPolicy());
+            listener = Executors.newSingleThreadExecutor();
+            listener.submit(this::listenAndSubmit);
+        }
+
+        private void listenAndSubmit() {
+            while (!Thread.currentThread().isInterrupted()) {
                 try {
-                    while (!Thread.interrupted()) {
-                        DatagramPacket p = new DatagramPacket(new byte[socket.getReceiveBufferSize()],
-                                socket.getReceiveBufferSize());
-                        socket.receive(p);
-                        String reply = "Hello, " + new String(p.getData(), p.getOffset(), p.getLength(), Util.CHARSET);
-                        p.setData(reply.getBytes(Util.CHARSET), 0, reply.getBytes().length);
-                        socket.send(p);
-                    }
-                } catch (PortUnreachableException e) {
-                    System.err.println("Socket is connected to unreachable destination: " + e.getMessage());
+                    final DatagramPacket p = Utils.createToReceive(socket.getReceiveBufferSize());
+                    socket.receive(p);
+                    serverThreads.submit(() -> respond(p));
                 } catch (IOException e) {
-                    System.err.println("An I/O error occured: " + e.getMessage());
+                    if (!closed) {
+                        System.err.println("An I/O error occured during proccesing datagram: " + e.getMessage());
+                    }
                 }
-            })).limit(threads).toArray(Thread[]::new);
-            Arrays.stream(serverThreads).forEach(Thread::start);
+            }
+        }
+
+        private void respond(final DatagramPacket p) {
+            final String reply = "Hello, " + new String(p.getData(), p.getOffset(), p.getLength(), Util.CHARSET);
+            try {
+                final DatagramPacket respond =  new DatagramPacket(reply.getBytes(Util.CHARSET), reply.getBytes().length, p.getSocketAddress());
+                socket.send(respond);
+            } catch (PortUnreachableException e) {
+                System.err.println("Socket is connected to unreachable destination: " + e.getMessage());
+            } catch (IOException e) {
+                if (!closed) {
+                    System.err.println("An I/O error occured during proccesing datagram: " + e.getMessage());
+                }
+            }
         }
 
         @Override
         public void close() {
-            for (Thread serverThread : serverThreads) {
-                serverThread.interrupt();
-            }
-            for (Thread serverThread : serverThreads) {
-                while (!serverThread.isInterrupted()) {
-                    try {
-                        serverThread.join();
-                    } catch (InterruptedException e) {
-                        System.err.println("Failed to join at least one server thread: " + e.getMessage());
-                    }
-                }
-            }
             socket.close();
+            closed = true;
+            listener.shutdownNow();
+            serverThreads.shutdownNow();
+            try {
+                serverThreads.awaitTermination(5, TimeUnit.SECONDS);
+            } catch (InterruptedException ignored) {
+            }
         }
     }
 }
