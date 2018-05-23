@@ -46,7 +46,7 @@ public class HelloUDPServer implements HelloServer, AutoCloseable {
 //        private final Thread[] serverThreads;
         private HelloServer(int port, int threads) throws SocketException {
             socket = new DatagramSocket(port);
-            serverThreads = new ThreadPoolExecutor(threads, threads, 1, TimeUnit.MINUTES
+            serverThreads = new ThreadPoolExecutor(threads, threads, 1, TimeUnit.SECONDS
                                     , new ArrayBlockingQueue<>(MAX_SIZE), new ThreadPoolExecutor.DiscardPolicy());
             listener = Executors.newSingleThreadExecutor();
             listener.submit(this::listenAndSubmit);

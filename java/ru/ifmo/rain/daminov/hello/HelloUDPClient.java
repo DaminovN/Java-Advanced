@@ -12,9 +12,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 public class HelloUDPClient implements HelloClient {
-    private final static List<String> ALL_HELLOS = Arrays.asList("%s Hello",
-            "%s ආයුබෝවන්", "Բարեւ, %s", "مرحبا %s", "Салом %s", "Здраво %s", "Здравейте %s", "Прывітанне %s", "Привіт %s", "Привет, %s", "Поздрав %s", "سلام به %s", "שלום %s", "Γεια σας %s", "העלא %s", "ہیل%s٪ ے", "Bonjou %s", "Bonjour %s", "Bună ziua %s", "Ciao %s", "Dia duit %s", "Dobrý deň %s", "Dobrý den, %s", "Habari %s", "Halló %s", "Hallo %s", "Halo %s", "Hei %s", "Hej %s", "Hello  %s", "Hello %s", "Hello %s", "Helo %s", "Hola %s", "Kaixo %s", "Kamusta %s", "Merhaba %s", "Olá %s", "Ola %s", "Përshëndetje %s", "Pozdrav %s", "Pozdravljeni %s", "Salom %s", "Sawubona %s", "Sveiki %s", "Tere %s", "Witaj %s", "Xin chào %s", "ສະບາຍດີ %s", "สวัสดี %s", "ഹലോ %s", "ಹಲೋ %s", "హలో %s", "हॅलो %s", "नमस्कार%sको", "হ্যালো %s", "ਹੈਲੋ %s", "હેલો %s", "வணக்கம் %s", "ကို %s မင်္ဂလာပါ", "გამარჯობა %s", "ជំរាបសួរ %s បាន", "こんにちは%s", "你好%s", "안녕하세요  %s");
-
 
     public static void main(String[] args) {
         int data[] = Utils.checkArguments(new int[]{1, 3, 4}, args, 5);
@@ -23,15 +20,6 @@ public class HelloUDPClient implements HelloClient {
 
     private static String getRequestForm(final String prefix, final int threadNumb, final int requestNumb) {
         return prefix + threadNumb + "_" + requestNumb;
-    }
-    private static Boolean isExpectedResponse(String request, String response) {
-        for (String s : ALL_HELLOS) {
-            s = String.format(s, request);
-            if (s.equals(response)) {
-                return true;
-            }
-        }
-        return false;
     }
     @Override
     public void run(String host, int port, String prefix, int threadNumb, int requests) {
@@ -74,7 +62,7 @@ public class HelloUDPClient implements HelloClient {
                         System.out.println("\nRequest sent:\n" + requestStr);
                         socket.receive(response);
                         final String responseStr = new String(response.getData(), response.getOffset(), response.getLength(), StandardCharsets.UTF_8);
-                        if ((responseStr.length() != requestStr.length()) && responseStr.contains(requestStr)) {
+                        if ((responseStr.length() > requestStr.length()) && responseStr.contains(requestStr)) {
                             System.out.println("\nRequest " + requestStr + " received: " + responseStr + "\n");
                             gotResponse = true;
                         }

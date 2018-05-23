@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6fbcd709-c562-4a31-8a47-e0395896abe7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/hello/HelloUDPClient.java" afterPath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/hello/HelloUDPClient.java" />
       <change beforePath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/hello/HelloUDPServer.java" afterPath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/hello/HelloUDPServer.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-advanced-2018/ru/ifmo/rain/daminov/hello/HelloUDPClient.class" afterPath="$PROJECT_DIR$/out/production/java-advanced-2018/ru/ifmo/rain/daminov/hello/HelloUDPClient.class" />
       <change beforePath="$PROJECT_DIR$/out/production/java-advanced-2018/ru/ifmo/rain/daminov/hello/HelloUDPServer$HelloServer.class" afterPath="$PROJECT_DIR$/out/production/java-advanced-2018/ru/ifmo/rain/daminov/hello/HelloUDPServer$HelloServer.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-advanced-2018/ru/ifmo/rain/daminov/hello/HelloUDPServer.class" afterPath="$PROJECT_DIR$/out/production/java-advanced-2018/ru/ifmo/rain/daminov/hello/HelloUDPServer.class" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/hello/HelloUDPServer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="936">
-              <caret line="72" column="37" lean-forward="true" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
+              <caret line="48" column="88" lean-forward="false" selection-start-line="48" selection-start-column="88" selection-end-line="48" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1105#1106#0" expanded="true" />
@@ -42,21 +43,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HelloUDPClient.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HelloUDPClient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/hello/HelloUDPClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" column="53" lean-forward="false" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
-              <folding />
+            <state relative-caret-position="302">
+              <caret line="54" column="67" lean-forward="true" selection-start-line="54" selection-start-column="67" selection-end-line="54" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebCrawler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WebCrawler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/crawler/WebCrawler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1092">
-              <caret line="67" column="41" lean-forward="false" selection-start-line="67" selection-start-column="41" selection-end-line="67" selection-end-column="41" />
+            <state relative-caret-position="0">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -321,7 +324,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ServerTest">
+  <component name="RunManager" selected="Application.HelloUDPClient">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -531,10 +534,10 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.ServerTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ClientTest" />
-        <item index="2" class="java.lang.String" itemvalue="Application.HelloUDPClient" />
-        <item index="3" class="java.lang.String" itemvalue="Application.HelloUDPServer" />
+        <item index="0" class="java.lang.String" itemvalue="Application.HelloUDPClient" />
+        <item index="1" class="java.lang.String" itemvalue="Application.HelloUDPServer" />
+        <item index="2" class="java.lang.String" itemvalue="Application.ClientTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.ServerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -584,7 +587,7 @@
       <workItem from="1524048459989" duration="4793000" />
       <workItem from="1526467043707" duration="5157000" />
       <workItem from="1527036493571" duration="16670000" />
-      <workItem from="1527065373525" duration="4458000" />
+      <workItem from="1527065373525" duration="5582000" />
     </task>
     <servers />
   </component>
@@ -594,10 +597,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194648000" />
+    <option name="totallyTimeSpent" value="195772000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="70" width="1920" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -608,8 +612,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23455498" sideWeight="0.50192416" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3798186" sideWeight="0.49807587" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35600907" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2414966" sideWeight="0.49807587" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35600907" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19665948" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -969,10 +973,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/crawler/WebCrawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/hello/HelloUDPServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="936">
-          <caret line="72" column="37" lean-forward="true" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
+          <caret line="48" column="88" lean-forward="false" selection-start-line="48" selection-start-column="88" selection-end-line="48" selection-end-column="88" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1105#1106#0" expanded="true" />
@@ -983,17 +995,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/hello/HelloUDPClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="53" lean-forward="false" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/crawler/WebCrawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="67" column="41" lean-forward="false" selection-start-line="67" selection-start-column="41" selection-end-line="67" selection-end-column="41" />
-          <folding />
+        <state relative-caret-position="302">
+          <caret line="54" column="67" lean-forward="true" selection-start-line="54" selection-start-column="67" selection-end-line="54" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
