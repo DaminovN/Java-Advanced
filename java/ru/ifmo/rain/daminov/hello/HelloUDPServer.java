@@ -1,6 +1,7 @@
 package ru.ifmo.rain.daminov.hello;
 
-import info.kgeorgiy.java.advanced.hello.*;
+import info.kgeorgiy.java.advanced.hello.HelloServer;
+import info.kgeorgiy.java.advanced.hello.Util;
 
 import java.io.IOException;
 import java.net.DatagramPacket;

@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fbcd709-c562-4a31-8a47-e0395896abe7" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/hello/HelloUDPServer.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/java-advanced-2018.iml" afterPath="$PROJECT_DIR$/.idea/java-advanced-2018.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/crawler/WebCrawler.java" afterPath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/crawler/WebCrawler.java" />
-      <change beforePath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/implementor/Implementor.java" afterPath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/implementor/Implementor.java" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-advanced-2018/ru/ifmo/rain/daminov/crawler/WebCrawler$HostData.class" afterPath="$PROJECT_DIR$/out/production/java-advanced-2018/ru/ifmo/rain/daminov/crawler/WebCrawler$HostData.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-advanced-2018/ru/ifmo/rain/daminov/crawler/WebCrawler$LinkHandler.class" afterPath="$PROJECT_DIR$/out/production/java-advanced-2018/ru/ifmo/rain/daminov/crawler/WebCrawler$LinkHandler.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-advanced-2018/ru/ifmo/rain/daminov/crawler/WebCrawler.class" afterPath="$PROJECT_DIR$/out/production/java-advanced-2018/ru/ifmo/rain/daminov/crawler/WebCrawler.class" />
+      <change beforePath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/hello/HelloUDPServer.java" afterPath="$PROJECT_DIR$/java/ru/ifmo/rain/daminov/hello/HelloUDPServer.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,25 +26,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="StudentDB.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/student/StudentDB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="106" column="5" lean-forward="false" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="HelloUDPServer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/hello/HelloUDPServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+            <state relative-caret-position="104">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1577#1578#0" expanded="true" />
-                <element signature="e#1607#1608#0" expanded="true" />
+                <element signature="e#1634#1635#0" expanded="true" />
+                <element signature="e#1664#1665#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StudentDB.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/student/StudentDB.java">
+      <file leaf-file-name="Util.class" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java/info/kgeorgiy/java/advanced/hello/Util.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-315">
-              <caret line="106" column="5" lean-forward="false" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+            <state relative-caret-position="156">
+              <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -59,8 +62,8 @@
       <file leaf-file-name="Implementor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/implementor/Implementor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="504" column="290" lean-forward="true" selection-start-line="504" selection-start-column="2" selection-end-line="504" selection-end-column="290" />
+            <state relative-caret-position="12428">
+              <caret line="504" column="290" lean-forward="false" selection-start-line="504" selection-start-column="2" selection-end-line="504" selection-end-column="290" />
               <folding />
             </state>
           </provider>
@@ -212,9 +215,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -290,13 +293,6 @@
               <item name="java-advanced-2018" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="daminov" type="462c0819:PsiDirectoryNode" />
-              <item name="implementor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="java-advanced-2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java-advanced-2018" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="daminov" type="462c0819:PsiDirectoryNode" />
               <item name="student" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -307,7 +303,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -371,7 +367,7 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="info.kgeorgiy.java.advanced.hello.Tester" />
-      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="server-i18n ru.ifmo.rain.daminov.hello.HelloUDPServer" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -599,7 +595,8 @@
       <workItem from="1523442880878" duration="2227000" />
       <workItem from="1524006234337" duration="1106000" />
       <workItem from="1524048459989" duration="4793000" />
-      <workItem from="1526467043707" duration="4960000" />
+      <workItem from="1526467043707" duration="5157000" />
+      <workItem from="1527036493571" duration="375000" />
     </task>
     <servers />
   </component>
@@ -609,7 +606,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173323000" />
+    <option name="totallyTimeSpent" value="173895000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="70" width="1920" height="1053" extended-state="6" />
@@ -624,11 +621,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23455498" sideWeight="0.50192416" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43537414" sideWeight="0.49807587" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35147393" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43537414" sideWeight="0.49807587" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35600907" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3588362" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36476293" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -688,13 +685,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/java/info/kgeorgiy/java/advanced/student/Tester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/util/List.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -927,9 +917,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -963,7 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -993,7 +979,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/student/StudentDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
+        <state relative-caret-position="26">
           <caret line="106" column="5" lean-forward="false" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
           <folding />
         </state>
@@ -1001,20 +987,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/implementor/Implementor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="504" column="290" lean-forward="true" selection-start-line="504" selection-start-column="2" selection-end-line="504" selection-end-column="290" />
+        <state relative-caret-position="12428">
+          <caret line="504" column="290" lean-forward="false" selection-start-line="504" selection-start-column="2" selection-end-line="504" selection-end-column="290" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java/info/kgeorgiy/java/advanced/hello/Util.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/java/ru/ifmo/rain/daminov/hello/HelloUDPServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        <state relative-caret-position="104">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1577#1578#0" expanded="true" />
-            <element signature="e#1607#1608#0" expanded="true" />
+            <element signature="e#1634#1635#0" expanded="true" />
+            <element signature="e#1664#1665#0" expanded="true" />
           </folding>
         </state>
       </provider>
